@@ -32,7 +32,7 @@ class CheckMark extends HTMLElement {
       : 'A verification check showing that I am definitely verified';
   }
   get color() {
-    return this.hasAttribute('color') ? this.getAttribute('color') : '#00a9e2';
+    return this.hasAttribute('color') ? this.getAttribute('color') : '#ff0000';
   }
   get size() {
     return this.hasAttribute('size') ? this.getAttribute('size') : '1.75ex';
@@ -42,7 +42,7 @@ customElements.define('check-mark', CheckMark);
       </script>
       
        <script>
-        let titleText = "mohamad";
+        let titleText = "zythrical";
         let index = 0;
         let direction = 1; // 1 for forward, -1 for backward
         let speed = 500; // Speed of the typing effect
@@ -69,7 +69,7 @@ customElements.define('check-mark', CheckMark);
         // Ensure the title is never blank, especially during reset
         window.onload = function() {
             setTimeout(function() {
-                document.title = 'm'; // Clear title initially to prevent URL from showing
+                document.title = 'z'; // Clear title initially to prevent URL from showing
                 updateTitle(); // Start the typewriter effect after clearing title
             }, 100); // Small delay to ensure page is loaded
         };
@@ -78,19 +78,19 @@ customElements.define('check-mark', CheckMark);
 <body>
   <!-- Video Background -->
   <div class="video-background">
-    <video autoplay loop muted playsinline>
-      <source src="https://mega.nz/file/7qBw0JSC#2l8VvrOm7kw1j7V7ZXFAAQGsfLkvHoStkPQSlFSYOa8" type="video/mp4">
+    <video autoplay loop muted>
+      <source src="https://res.cloudinary.com/djt8vwnv7/video/upload/v1735066740/bgweb_avfzki.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
 
   <!-- Bio Content -->
   <div class="bio-container">
-    <h1 class="name">mohamad<check-mark>mohamad</check-mark></h1>
-    <p class="handle">@mjnaous</p>
-    <p class="description">“I have never regretted my silence, as for my speech I’ve regretted it many times.” -Umar ibn Al-Khattab</p>
+    <h1 class="name">mohamad<check-mark></check-mark></h1>
+    <p class="handle">@zythrical</p>
+    <p class="description"></p>
     <div class="social-buttons">
-      <a href="https://x.com/mjnaous" target="_blank" class="social-button">
+      <a href="https://x.com/zythrical" target="_blank" class="social-button">
         <img src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=FFFFFF">
       </a>
       <a href="https://discord.com/users/1077628911267086496" target="_blank" class="social-button">
@@ -99,11 +99,6 @@ customElements.define('check-mark', CheckMark);
       <a href="https://www.roblox.com/users/1861476024/profile" target="_blank" class="social-button">
         <img src="https://img.icons8.com/?size=100&id=97652&format=png&color=FFFFFF" alt="Roblox Logo">
       </a>
-      <a href="https://github.com/mjnaous" target="_blank" class="social-button">
-        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=FFFFFF" alt="GitHub Logo">
-      </a>
-      <a href="https://tiktok.com/@mjnaous" target="_blank" class="social-button">
-        <img src="https://img.icons8.com/?size=100&id=118638&format=png&color=FFFFFF" alt="TikTok Logo">
       <a href="https://naous.eu.org" target="_blank" class="social-button">
         <img src="https://img.icons8.com/?size=100&id=9918&format=png&color=FFFFFF" alt="domain">
       </a>
