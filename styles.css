@@ -1,0 +1,148 @@
+/* Font Definitions */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('//cdn.fontshare.com/wf/NWBQYJIM7GCZ5XWD7D26ARB3VDY55ZRT/K63EV2KZIGKLE7RANQ2U42S6SVHU5RJ7/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/NWBQYJIM7GCZ5XWD7D26ARB3VDY55ZRT/K63EV2KZIGKLE7RANQ2U42S6SVHU5RJ7/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/NWBQYJIM7GCZ5XWD7D26ARB3VDY55ZRT/K63EV2KZIGKLE7RANQ2U42S6SVHU5RJ7/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+/* Global Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Satoshi', Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bio Container */
+.bio-container {
+  text-align: center;
+  z-index: 1;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  animation: glow 2s infinite alternate;
+  margin: -5px -10px;
+}
+
+.handle {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ddd;
+  margin: -10px -10px;
+}
+
+.description {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #bbb;
+  font-weight: 900;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-button img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.social-button img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+}
+
+/* Glowing Text Animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Dark Overlay */
+.video-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust the alpha value for desired darkness */
+  z-index: 1;
+}
+
+/* Tooltip Text (Initially Hidden) */
+.check-mark::after {
+  content: 'Verified';
+  position: absolute;
+  top: -30px; /* Adjust above the badge */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  white-space: nowrap; /* Prevent wrapping */
+  z-index: 10;
+}
+
+/* Show Tooltip on Hover */
+.check-mark:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px); /* Add slight motion on hover */
+}
+
+::selection {
+  background-color: white;
+  color: black;
+  }
+
+  a::selection {
+    color: #fff;
+    background-color: white;
+  }
